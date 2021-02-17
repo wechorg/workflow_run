@@ -27,6 +27,6 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Log Some Event Variables
         run: |
-          echo ${{ github.event.workflow_run.action }},
-          echo ${{ github.event.workflow_run.repository.archived }}
-          echo ${{ github.event.workflow_run.sender.login }}
+          echo ${{ github.event.workflow_run.pull_requests[0].number }},
+          echo ${{ github.event.workflow_run.pull_requests[0].head.sha }}
+          echo ${{ github.event.workflow_run.head_sha }}
