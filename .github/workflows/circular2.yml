@@ -1,0 +1,19 @@
+# This is a basic workflow to help you get started with Actions
+
+name: circular2
+
+# Controls when the action will run. 
+on:
+  workflow_dispatch:
+  workflow_run:
+    workflows: ["circular1"]
+    branches: [main]
+    types:
+      - completed
+#       - requested
+
+jobs:
+   build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Hi there"
