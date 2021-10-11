@@ -1,0 +1,19 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Wfrun
+
+# Controls when the action will run. 
+on:
+  workflow_dispatch:
+  workflow_run:
+    workflows: ["Wfrun"]
+    branches: [main]
+    types:
+      - completed
+#       - requested
+
+jobs:
+   build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Hi there"
