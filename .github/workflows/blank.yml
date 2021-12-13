@@ -5,7 +5,7 @@ name: Wfrun
 # Controls when the action will run. 
 on:
   workflow_run:
-    workflows: ["[foo] parent"]
+    workflows: ["foo parent"]
     branches: [main]
     types:
       - completed
