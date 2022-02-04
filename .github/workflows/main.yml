@@ -6,6 +6,7 @@ on:
     branches:
       - release/**
       - main
+      - dev
   release:
   workflow_dispatch: {}
 jobs:
